@@ -1,6 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<body>
-    <h1>Hello</h1>
-</body>
+  <head>
+    <title>Connect 4</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Who is playing?</h1>
+    <button class="mainMenu" onclick="initializeGame(true, true)">
+      Human Vs. Human
+    </button>
+    <button class="mainMenu" onclick="initializeGame(true, false)">
+      Human Vs. AI
+    </button>
+    <button class="mainMenu" onclick="initializeGame(false, false)">
+      AI Vs. AI
+    </button>
+    <button class="mainMenu" onclick="initializeGame(false, true)">
+      AI Vs. Human
+    </button>
+    <table class="visualizer hide">
+      <!-- chip visualizaion -->
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <table class="gameBoard hide">
+      <!-- Game -->
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <button class="gamePlay hide" onclick="undrop()" id="undo">
+      Undo
+    </button>
+    <button class="gamePlay hide" onclick="mainmenu()" id ="main">
+      Main Menu
+    </button>
+    <!-- <button></button> -->
+    <script src="./JS_files/connect4.js"></script>
+  </body>
 </html>
